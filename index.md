@@ -1,37 +1,34 @@
-## Welcome to GitHub Pages
+# Grafana_migrator
+Used for migrating Dashboards and  Datasources form one Grafana Instance to another Grafana Instance
 
-You can use the [editor on GitHub](https://github.com/sandeshk06/grafana_migrator/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+**What is Grafana ?**
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Grafana is a multi-platform open source analytics and interactive visualization web application. It provides charts, graphs, and alerts for the web when connected to supported data sources.
 
-### Markdown
+**What is Grafana Migrator Tool**
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+- Based on wizzy grafana backup tool
+- Python based Grafana migration tool for migrating datasources and  dashboards form one grafana instance to  another grafana instance.
+- Useful when we need to migrate grafana old instance to new instance.
 
-```markdown
-Syntax highlighted code block
+**How to use**
+- Install Wizzy **https://grafana-wizzy.com**
+- Configure Grafana Source Url
+- Import datasources and  Dashboard
+- Configure Grafana Destination Url
+- Export datasources and  Dashboard
 
-# Header 1
-## Header 2
-### Header 3
+**Prerequisite:**
+- python3,pip3,git, wizzy installed on system
+- pip3 install bcolors
 
-- Bulleted
-- List
+**Steps to Run:**
+- git clone https://github.com/sandeshk06/grafana_migrator .git
+- cd grafana_migrator
+- python3 grafana_migration.py
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/sandeshk06/grafana_migrator/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+**Using Dockerfile:**
+- git clone https://github.com/sandeshk06/grafana_migrator .git
+- cd grafana_migrator
+- docker build -t grafana_migrator .
+- docker run -it --name grafana_migration -e PYTHONIOENCODING=utf-8 grafana_migrtor
