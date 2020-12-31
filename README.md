@@ -23,12 +23,12 @@ Grafana is a multi-platform open source analytics and interactive visualization 
 - pip3 install bcolors
 
 **Steps to Run:**
-- git clone https://github.com/sandeshk06/grafana_migrator .git
+- git clone https://github.com/sandeshk06/Grafana_migrator .git
 - cd grafana_migrator
 - python3 grafana_migration.py
 
 **Using Dockerfile:**
-- git clone https://github.com/sandeshk06/grafana_migrator .git
+- git clone https://github.com/sandeshk06/Grafana_migrator .git
 - cd grafana_migrator
 - docker build -t grafana_migrator .
 - docker run -it --name grafana_migration -e PYTHONIOENCODING=utf-8 grafana_migrtor
